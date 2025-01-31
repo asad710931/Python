@@ -27,7 +27,7 @@ class Calculator:
             self.sub_trigger=False
             self.mult_trigger=False
             self.div_trigger=False
-            self.calc_value=float(self.entry_value.get())
+            self.calc_value=float(self.number_entry.get())
             if value=='+':
                 self.add_trigger=True
                 print('+ Pressed')
@@ -48,14 +48,14 @@ class Calculator:
         
         if self.add_trigger or self.sub_trigger or self.div_trigger or self.mult_trigger:
             if self.add_trigger:
-                solution = self.calc_value+float(self.entry_value.get())
+                solution = self.calc_value+float(self.number_entry.get())
             elif self.sub_trigger:
-                solution = self.calc_value-float(self.entry_value.get())
+                solution = self.calc_value-float(self.number_entry.get())
             elif self.mult_trigger:
-                solution = self.calc_value*float(self.entry_value.get())
+                solution = self.calc_value*float(self.number_entry.get())
             else:
-                solution =self.calc_value/float(self.entry_value.get())
-            print(self.calc_value," ",float(self.entry.get()),solution)
+                solution =self.calc_value/float(self.number_entry.get())
+            print(self.calc_value," ",float(self.number_entry.get()),solution)
             self.number_entry.delete(0,'end')
             self.number_entry.insert(0,solution)
 
@@ -67,12 +67,14 @@ class Calculator:
         style=ttk.Style()
         style.configure("TButton",font="Serif 10",padding=5)
         style.configure("TEntry",font="Serif 22",padding=10)
-        self.number_entry=ttk.Entry(root,textvariable=self.entry_value,width=50).grid(row=0,columnspan=5)
+        self.number_entry=ttk.Entry(root,textvariable=self.entry_value,width=50)
+        self.number_entry.grid(row=0,columnspan=5)
         #--------1st row--------
         self.button7=ttk.Button(root,text="7",command=lambda:self.button_press('7')).grid(row=1,column=0)
         self.button8=ttk.Button(root,text="8",command=lambda:self.button_press('8')).grid(row=1,column=1)
-        self.button9=ttk.Button(root,text='9',command=lambda:self.button_press('9')).grid(row=1,column=2)
+        self.button9=ttk.Button(root,text="9",command=lambda:self.button_press('9')).grid(row=1,column=2)
         self.buttonDiv=ttk.Button(root,text='/',command=lambda:self.math_button_press('/')).grid(row=1,column=3)
+        
         #--------2st row--------
 
         self.button4=ttk.Button(root,text="4",command=lambda:self.button_press('4')).grid(row=2,column=0)
