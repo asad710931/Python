@@ -1,0 +1,4 @@
+1 | Reading Books | !Done[ ]
+2 | Praying Five time a day | !Done[ ]
+3 | Reading quran | Done [*]
+4 | eat Healthy  food | !Done[ ]
