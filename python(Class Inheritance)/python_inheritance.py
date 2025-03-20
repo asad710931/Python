@@ -11,7 +11,7 @@ class Human:
     
 
 
-person1 = Human('Asad',30,'Bangali','Male',178)
+person1 = Human('Asad',24,'Bangali','Male',178)
 
 
 
