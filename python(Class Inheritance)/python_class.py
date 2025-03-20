@@ -37,13 +37,13 @@ class Human:
         
 print('Name |\tAge  | Ethnicity |\tGender  |\tHeight')
 print("-----+-------+-----------+----------+------------------|")
-person1 = Human('Asad',30,'Bangali','Male',175)
+person1 = Human('Asad',24,'Bangali','Male',178)
 
-person2 = Human('Aamir',40,'Pakistani','Male',185)
+person2 = Human('Aamir',19,'Pakistani','Male',168)
 
-person3 = Human('Hakeem',33,'Egyptian','Male',180)
+person3 = Human('Hakeem',33,'Egyptian','Male',170)
 
-person4 = Human('Omar',29,'European','Male',183)
+person4 = Human('Omar',29,'European','Male',185)
 
     
 print(person1)
